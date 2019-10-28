@@ -1,24 +1,26 @@
 ﻿using System.Collections.Generic;
 using Acelera.OO.CarRental.AdditionalItems;
 
-namespace Acelera.OO.CarRental.Contracts
+namespace Acelera.OO.CarRental.Vehicles
 {
-    public class CarContract : Contract
+    public class Car : Vehicle
     {
-        public CarContract()
+        public Car()
         {
             InsertAdditionalItems();
         }
 
-        protected override double GetAdditionalKm() =>
+        public override string GetCarType() =>
+            "Carro";
+
+        public override double GetAdditionalKm() =>
             0.5;
 
-        protected override double GetDailyValue() =>
+        public override double GetDailyValue() =>
             50;
-
         private void InsertAdditionalItems()
         {
-            this.additionalItems = new List<AdditionalItem>()
+            this.AdditionalItems = new List<AdditionalItem>()
             {
                 new GPS(25),
                 new CarSeat(65)

@@ -2,8 +2,8 @@
 {
     public class Refrigerator : AdditionalItem
     {
-        public Refrigerator(string description, double value)
-            : base(description, value)
+        public Refrigerator(double value)
+            : base("Geladeira", value)
         {}
     }
 }
