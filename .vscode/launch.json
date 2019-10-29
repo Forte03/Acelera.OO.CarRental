@@ -13,7 +13,7 @@
             "program": "${workspaceFolder}/Acelera.OO.CarRental.Tests/bin/Debug/netcoreapp3.0/Acelera.OO.CarRental.Tests.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Acelera.OO.CarRental.Tests",
-            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            // For more informtrueation about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
         },

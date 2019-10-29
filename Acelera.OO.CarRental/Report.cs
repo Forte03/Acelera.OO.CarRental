@@ -15,17 +15,17 @@ namespace Acelera.OO.CarRental
             Contracts = contracts;
         }
 
-        public StringBuilder GenerateReportByVehicleType()
+        public string GenerateReportByVehicleType()
         {
-            StringBuilder result = new StringBuilder();
+            string result = "";
             foreach (var item in Contracts)
             {
-                result.AppendLine("Tipo do Carro: " + item.Vehicle.GetCarType());
-                result.AppendLine("Quantidade de diárias: " + item.DailyAmount);
-                result.AppendLine("Valor total das diárias: R$ " + item.TotalAmountDaily);
-                result.AppendLine("Estimativa de quilometragem em reais: R$ " + item.TotalAmountAdditionalKm);
-                result.AppendLine("Valor de todos os adicionais: " + GetAdditionalItensValue(item.Vehicle));
-                result.AppendLine("Valor total do aluguel: R$ " + item.Total);
+                result += "Tipo do Carro: " + item.Vehicle.GetCarType() + "\n" +
+                "Quantidade de diárias: " + item.DailyAmount + "\n" +
+                "Valor total das diárias: R$ " + item.TotalAmountDaily.ToString("N2") + "\n" +
+                "Estimativa de quilometragem em reais: R$ " + item.TotalAmountAdditionalKm.ToString("N2") + "\n" +
+                "Valor de todos os adicionais: " + GetAdditionalItensValue(item.Vehicle) + "\n" +
+                "Valor total do aluguel: R$ " + item.Total.ToString("N2") + "\n";
             }
 
             return result;

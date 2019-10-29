@@ -24,9 +24,7 @@ namespace Acelera.OO.CarRental.Tests
 
             var report = new Report(contractList);
 
-            Assert.AreNotEqual<string>(MockGerateReportByVehicleType(), report.GenerateReportByVehicleType().ToString());
-
-            report.GenerateReportByVehicleType();
+            Assert.AreEqual(MockGerateReportByVehicleType(), report.GenerateReportByVehicleType().ToString());
         }
 
         public string MockGerateReportByVehicleType()
@@ -34,16 +32,16 @@ namespace Acelera.OO.CarRental.Tests
             var result =
                 "Tipo do Carro: Motor Home\n" +
                 "Quantidade de diárias: 10\n" +
-                "Valor total das diárias: R$ 3000\n" +
-                "Estimativa de quilometragem em reais: R$ 130\n" +
+                "Valor total das diárias: R$ 3.000,00\n" +
+                "Estimativa de quilometragem em reais: R$ 130,00\n" +
                 "Valor de todos os adicionais: GPS: R$ 35,00 Cadeirinha: R$ 75,00 Geladeira: R$ 250,00 \n" +
-                "Valor total do aluguel: R$ 3490\n" +
+                "Valor total do aluguel: R$ 3.490,00\n" +
                 "Tipo do Carro: Carro\n" +
                 "Quantidade de diárias: 10\n" +
-                "Valor total das diárias: R$ 500\n" +
-                "Estimativa de quilometragem em reais: R$ 100\n" +
+                "Valor total das diárias: R$ 500,00\n" +
+                "Estimativa de quilometragem em reais: R$ 100,00\n" +
                 "Valor de todos os adicionais: GPS: R$ 25,00 Cadeirinha: R$ 65,00 \n" +
-                "Valor total do aluguel: R$ 690\n";
+                "Valor total do aluguel: R$ 690,00\n";
 
             return result;
         }
